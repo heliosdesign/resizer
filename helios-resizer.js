@@ -1,10 +1,10 @@
 var heliosResizer = (function(_ratio){
 
     
-var functions = [],         // registered functions to call on resize
-	ratio = _ratio || 9/16, // default 16:9 ratio
-	timeout = 0,            // 
-	data = {		        // size data in pixels: width height top left
+var functions = [], // registered functions to call on resize
+	ratio = 9/16,   // default 16:9 ratio
+	timeout = 0,    // 
+	data = {		// size data in pixels: width height top left
 
 		// fill screen
 		cover : { 
@@ -99,7 +99,8 @@ doit();
 
 return {
 	add : add,
-	remove : remove
+	remove : remove,
+	ratio : ratio
 };
 
 });
