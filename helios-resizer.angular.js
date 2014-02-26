@@ -84,11 +84,12 @@ var doit = function(){
 
 
 	// call registered functions
-	for (func in functions) {
+	for (var func in functions) {
 		if (functions.hasOwnProperty(func)) {
 			functions[func](data);
 		}
-	}	
+	}		
+	
 }
 
 var onresize = function(){
