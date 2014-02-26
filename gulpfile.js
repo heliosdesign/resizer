@@ -38,6 +38,7 @@ gulp.task('build-ng', function(){
         .pipe(rename({
             basename: 'helios-resizer.angular'
         }))
+        .pipe(gulp.dest('.'))
         .pipe(uglify({ mangle: false }))
         .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest('.'))

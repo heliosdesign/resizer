@@ -1,8 +1,8 @@
 
-var functions = [],         // registered functions to call on resize
-	ratio = _ratio || 9/16, // default 16:9 ratio
-	timeout = 0,            // 
-	data = {		        // size data in pixels: width height top left
+var functions = [], // registered functions to call on resize
+	ratio = 9/16,   // default 16:9 ratio
+	timeout = 0,    // 
+	data = {		// size data in pixels: width height top left
 
 		// fill screen
 		cover : { 
@@ -79,11 +79,12 @@ var doit = function(){
 
 
 	// call registered functions
-	for (func in functions) {
+	for (var func in functions) {
 		if (functions.hasOwnProperty(func)) {
 			functions[func](data);
 		}
-	}	
+	}		
+	
 }
 
 var onresize = function(){
@@ -97,5 +98,6 @@ doit();
 
 return {
 	add : add,
-	remove : remove
+	remove : remove,
+	ratio : ratio
 };

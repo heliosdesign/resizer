@@ -1,6 +1,9 @@
-var heliosResizer = (function(_ratio){
+(function(window, angular, undefined) {'use strict';
 
-    
+angular.module('heliosResizer', ['ng'])
+    .factory('resizer', function($window, $rootScope) {
+
+        
 var functions = [], // registered functions to call on resize
 	ratio = 9/16,   // default 16:9 ratio
 	timeout = 0,    // 
@@ -103,5 +106,7 @@ return {
 	remove : remove,
 	ratio : ratio
 };
+            
+    });
 
-});
+})(window, window.angular);
